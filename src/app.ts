@@ -76,3 +76,8 @@ const getSum = (a: number, b: number, c: number = 18) => {
 const getDiff = (a: number, b: number): number => {
 	return a - b;
 }
+
+// Type Aliases
+type StrOrNum = string | number;
+
+const thirdAge: StrOrNum = 12;

@@ -56,3 +56,4 @@ var getSum = function (a, b, c) {
 var getDiff = function (a, b) {
     return a - b;
 };
+var thirdAge = 12;
