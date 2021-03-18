@@ -16,18 +16,9 @@ form.addEventListener('submit', (e: Event) => {
 
 // Create the Invoice class
 class Invoice {
-
-	// Declare properties
-	client: string;
-	details: string;
-	amount: number;
 	
 	// Map properties to inputs
-	constructor(client: string, details: string, amount: number) {
-		this.client = client;
-		this.details = details;
-		this.amount = amount;
-	}
+	constructor(private client: string, private details: string, private amount: number) {}
 
 	format () {
 		return `${ this.client } owes ₦${ this.amount } for ${ this.details }`;
