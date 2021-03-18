@@ -15,19 +15,19 @@
 
     <form class="form bg-primary m-5 p-5">
       <div class="form-group mt-3">
-        <select id="type" class="form-control">
+        <select id="type" class="form-control" required>
           <option value="Invoice">Invoice</option>
           <option value="Payment">Payment</option>
         </select>
       </div>
       <div class="form-group mt-3">
-        <input type="text" class="form-control" placeholder="To / From" id="toOrFrom">
+        <input type="text" class="form-control" placeholder="To / From" id="toOrFrom" required>
       </div>
       <div class="form-group mt-3">
-        <textarea class="form-control" placeholder="Details" id="details"></textarea>
+        <textarea class="form-control" placeholder="Details" id="details" required></textarea>
       </div>
       <div class="form-group mt-3">
-        <input type="number" class="form-control" placeholder="Amount (₦)" id="amount">
+        <input type="number" class="form-control" placeholder="Amount (₦)" id="amount" required>
       </div>
       <div class="form-group mt-3">
         <button class="btn btn-outline-danger form-control" type="submit">Add</button>
