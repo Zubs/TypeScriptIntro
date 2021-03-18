@@ -1,3 +1,6 @@
+// Import Invoice
+import { Invoice } from "./classes/invoice.js";
+
 // Get Form
 const form = document.querySelector('.form') as HTMLFormElement;
 
@@ -14,18 +17,9 @@ form.addEventListener('submit', (e: Event) => {
 	console.log(type.value, toOrFrom.value, details.value, amount.valueAsNumber);
 });
 
-// Create the Invoice class
-class Invoice {
-	
-	// Map properties to inputs
-	constructor(private client: string, private details: string, private amount: number) {}
-
-	format () {
-		return `${ this.client } owes ₦${ this.amount } for ${ this.details }`;
-	}
-}
-
 const invOne = new Invoice("Zubair", "Website money", 2500);
+
+console.log(invOne.format());
 
 // An array of only invoices
 let invoices: Invoice [] = [];

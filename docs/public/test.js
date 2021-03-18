@@ -1,16 +1,16 @@
 "use strict";
 // Variables
-var age = 21;
+const age = 21;
 console.log(age);
 // Types
-var getCircumference = function (diameter) {
+const getCircumference = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(getCircumference(5));
 // Arrays
-var mixed = ["Age", 32, true];
+let mixed = ["Age", 32, true];
 mixed.push("Hello");
-var numberOnly = [1, 2, 3, 4, 5];
+let numberOnly = [1, 2, 3, 4, 5];
 numberOnly.push(11);
 // Objects
 var zubair = {
@@ -19,26 +19,26 @@ var zubair = {
     male: true
 };
 // Types
-var students;
-var loggedIn;
-var testCharacter;
-var uuid; // No parentheses if it's not in front of an array.
-var people = [];
-var mixedArray = [];
-var person; // This allows for person to be an array.
-var secondPerson;
+let students;
+let loggedIn;
+let testCharacter;
+let uuid; // No parentheses if it's not in front of an array.
+let people = [];
+let mixedArray = [];
+let person; // This allows for person to be an array.
+let secondPerson;
 // Any as a type
-var secondAge = 25;
-var secondMixedArray = [];
+let secondAge = 25;
+let secondMixedArray = [];
 // Functions
-var sayHello;
-var addNumbers = function (a, b) {
+let sayHello;
+const addNumbers = (a, b) => {
     console.log(a + b);
 };
 addNumbers(2, 8);
 // Optional parameters
 // Without default
-var getProduct = function (a, b, c) {
+const getProduct = (a, b, c) => {
     if (c) {
         console.log(a * b * c);
     }
@@ -48,12 +48,11 @@ var getProduct = function (a, b, c) {
     ;
 };
 // With default
-var getSum = function (a, b, c) {
-    if (c === void 0) { c = 18; }
+const getSum = (a, b, c = 18) => {
     console.log(a + b + c);
 };
 // Set function return type
-var getDiff = function (a, b) {
+const getDiff = (a, b) => {
     return a - b;
 };
-var thirdAge = 12;
+const thirdAge = 12;
