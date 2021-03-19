@@ -31,18 +31,21 @@ form.addEventListener('submit', (e: Event) => {
 	// Just some security check
 	let doc: HasFormatter;
 
+	// Store Inputs
+	const values: [string, string, number] = [toOrFrom.value, details.value, amount.valueAsNumber]
+
 	// Check type
 	if (parseInt(type.value) === FinanceType.Invoice) {
 
 		// Instantiate Invoice
-		doc = new Invoice(toOrFrom.value, details.value, amount.valueAsNumber);
+		doc = new Invoice(...values);
 
 		// Render list
 		list.render(doc, type.value, 'end');
 	} else if (parseInt(type.value) === FinanceType.Payment) {
 
 		// Instantiate Payment
-		doc = new Payment(toOrFrom.value, details.value, amount.valueAsNumber);
+		doc = new Payment(...values);
 
 		// Render list
 		list.render(doc, type.value, 'end');
