@@ -1,3 +1,5 @@
+//Import Constants
+import { FinanceType } from "../store.js";
 export class ListTemplates {
     constructor(container) {
         this.container = container;
@@ -9,7 +11,7 @@ export class ListTemplates {
         // Create heading
         const h4 = document.createElement('h4');
         // Put User Entered Text In h4
-        h4.innerText = heading;
+        h4.innerText = parseInt(heading) === FinanceType.Invoice ? "Invoice" : "Payment";
         // Put h4 In List
         li.append(h4);
         // Create Paragraph

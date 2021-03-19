@@ -2,6 +2,8 @@
 import { Invoice } from "./classes/invoice.js";
 import { Payment } from "./classes/payment.js";
 import { ListTemplates } from "./classes/listTemplates.js";
+// Import Constants
+import { FinanceType } from "./store.js";
 // Get Form
 const form = document.querySelector('.form');
 // Get Inputs
@@ -19,13 +21,13 @@ form.addEventListener('submit', (e) => {
     // Just some security check
     let doc;
     // Check type
-    if (type.value === 'Invoice') {
+    if (parseInt(type.value) === FinanceType.Invoice) {
         // Instantiate Invoice
         doc = new Invoice(toOrFrom.value, details.value, amount.valueAsNumber);
         // Render list
         list.render(doc, type.value, 'end');
     }
-    else if (type.value === 'Payment') {
+    else if (parseInt(type.value) === FinanceType.Payment) {
         // Instantiate Payment
         doc = new Payment(toOrFrom.value, details.value, amount.valueAsNumber);
         // Render list
